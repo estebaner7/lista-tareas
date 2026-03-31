@@ -1,0 +1,83 @@
+/* 1. Fondo negro y quitar márgenes del navegador */
+body {
+    background-color: #121212; /* Negro mate muy pro */
+    color: white;              /* Texto blanco para que se lea */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;            /* Espacio pequeño en las orillas */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;  /* TODO SE ALINEA A LA IZQUIERDA */
+}
+
+/* 2. El contenedor de la lista (sin sangría) */
+#lista-tareas {
+    list-style: none;
+    padding: 0;               /* Quitamos la sangría por defecto de las listas */
+    margin: 20px 0 0 0;       /* Solo margen arriba para separar del input */
+    width: 100%;
+    max-width: 400px;         /* Para que no se estire infinito */
+}
+
+/* 3. Estilo de cada tarea (las cajitas) */
+li {
+    background-color: #1e1e1e; /* Gris muy oscuro para resaltar del fondo */
+    margin-bottom: 8px;
+    padding: 12px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 4px solid #007bff; /* Rayita azul a la izquierda */
+}
+
+/* 4. Los Botones (Azul y Azul Claro) */
+#boton-agregar {
+    background-color: #007bff; /* Azul fuerte */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+#boton-agregar:hover {
+    background-color: #00d4ff; /* Azul claro al pasar el mouse */
+}
+
+/* Estilo para el botón de eliminar (si decides agregarlo después) */
+.btn-eliminar {
+    background-color: #00d4ff; /* Azul claro */
+    color: #000;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* 5. El cuadro de texto (Input) */
+input {
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    width: 250px;
+}
+
+/* Estilo para el título principal */
+h1 {
+    color: white;              /* Letra blanca */
+    font-size: 2rem;          /* Tamaño grande pero no gigante */
+    margin-bottom: 20px;      /* Espacio abajo para no amontonarse */
+    width: 100%;              /* Asegura que ocupe todo el ancho */
+    text-align: left;         /* Alineado a la izquierda */
+}
+
+.tachado {
+    text-decoration: line-through;
+    color: gray; /* Opcional: para que se vea que ya no está activa */
+}
